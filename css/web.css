@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.navar-container {
+  position: fixed;
+  width: 100%;
+  background-color: #93d844;
+  box-shadow: 0px 4px 5px 0px rgba(219, 137, 59, 0.71);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  top: 0;
+  z-index: 1000;
+}
+
+.navar {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.nav-rigth img {
+  margin: 0;
+  width: 100px;
+}
+
+.navar-container a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+
+.navar-container a:hover {
+  color: #fff;
+}
+
+.navar-container h1 {
+  color: #222222;
+  font-size: 24px;
+  margin: 0;
+}
+
+.container {
+  margin-top: 30px; /* Espacio para la barra de navegación */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tu necesidad */
+  background-color: #f0f0f0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+  display: flex; /* Alinea los elementos horizontalmente */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra horizontalmente los elementos */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.iconos {
+  display: flex;
+  flex-direction: column; /* Apila los iconos verticalmente */
+  align-items: center; /* Centra horizontalmente los iconos */
+}
+
+.icono {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  margin: 10px; /* Espacio entre los iconos */
+  transition: color 0.3s; /* Transición suave para el cambio de color en el hover */
+}
+
+.icono:hover {
+  color: #93d844; /* Cambia el color en el hover */
+}
+
+.texto h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.texto button {
+  padding: 15px 30px;
+  background-color: #93d844;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+.texto button:hover {
+  background-color: #4CAF50;
+}
+
+.imagen img {
+  border-radius: 20px;
+  width: 400px;
+  height: auto;
+  max-height: 600px;
+}
+

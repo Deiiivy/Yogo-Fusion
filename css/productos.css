@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #F1F1F1;
+  transition: 0.3s ease all;
+}
+
+.navar-container {
+  position: fixed;
+  width: 100%;
+  background-color: #93d844;
+  box-shadow: 0px 4px 5px 0px rgba(219, 137, 59, 0.71);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  top: 0;
+  z-index: 1000;
+}
+
+.navar {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.nav-rigth img {
+  margin: 0;
+  width: 100px;
+}
+
+.navar-container a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+
+
+.navar-container a:hover {
+  color: #fff;
+}
+
+.navar-container h1 {
+  color: #222222;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* .navar-container img {
+  width: 80px;
+} */
+
+
+
+
+.titles h1 {
+  margin-top: 70px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
+  color: rgb(226, 126, 32);
+  font-weight: 800;
+  text-align: center;
+}
+
+.container h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.productos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px; 
+  
+}
+
+/* Estilo para el texto dentro de las cajas en modo claro */
+.productos .comprar-borojo h1,
+.productos .comprar-kiwi h1 {
+  color: #222; /* Color de texto en modo claro */
+}
+
+/* Estilo para el texto dentro de las cajas en modo oscuro */
+body.dark .productos .comprar-borojo h1,
+body.dark .productos .comprar-kiwi h1 {
+  color: #000000; /* Cambia el color del texto en modo oscuro a blanco o el que desees */
+}
+
+body.dark .productos .comprar-borojo p,
+body.dark .productos .comprar-kiwi p {
+  color: #000000; /* Cambia el color del texto en modo oscuro a blanco o el que desees */
+}
+
+
+.comprar-borojo,
+.comprar-kiwi {
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+  width: 45%; 
+  animation: borderAnimation 2s linear infinite;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-top: 1px solid #ff4400;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  25% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid #ff4400;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  50% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #ff4400;
+    border-left: 1px solid transparent;
+  }
+  75% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #ff4400;
+  }
+  100% {
+    border-top: 1px solid #ff4400;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+}
+
+.comprar-borojo:hover,
+.comprar-kiwi:hover {
+  transform: translateY(-5px); 
+}
+
+
+.comprar-borojo h1,
+.comprar-kiwi h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #222222;
+}
+
+.comprar-borojo p,
+.comprar-kiwi p {
+  font-weight: bold;
+}
+
+.comprar-borojo p,
+.comprar-kiwi p:hover{
+  cursor: pointer;
+}
+
+
+
+.comprar-borojo img,
+.comprar-kiwi img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+.btn-borojo,
+.btn-kiwi {
+  background-color: #93d844;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-borojo:hover,
+.btn-kiwi:hover {
+  background-color: #13a02a; 
+}
+
+/* Estilos para la ventana emergente del carrito */
+#carrito {
+  flex-direction: column;
+  margin-left: 60px;
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  max-width: 300px;
+}
+
+
+#carrito h2 {
+  margin-top: 0;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-carrito li {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+#lista-carrito li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+#lista-carrito li button {
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  position: relative; /* Permite posicionar el contador en el medio */
+}
+
+#lista-carrito li button:hover {
+  background-color: #ff0000; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para el contador */
+#lista-carrito li button span {
+  position: absolute; /* Posiciona el contador dentro del botón */
+  top: 50%; /* Lo ubica en la mitad verticalmente */
+  left: 50%; /* Lo ubica en la mitad horizontalmente */
+  transform: translate(-50%, -50%); /* Lo centra perfectamente */
+  font-size: 16px;
+}
+
+/* Estilos para los íconos de Font Awesome */
+#lista-carrito li button i {
+  font-size: 18px; /* Tamaño de fuente del ícono */
+  vertical-align: middle; /* Alinea verticalmente el ícono */
+  margin-right: 5px; /* Espacio a la derecha del ícono */
+}
+
+#total-carrito {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#pagar-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#pagar-btn:hover {
+  background-color: #5caa603a;
+  color: #45a049;
+  border: 1px solid black;
+}
+
+
+#mensaje-compra {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #18ac0a;
+  color: #343d5b;
+  font-weight: bold;
+  padding: 50px;
+  font-size: 20px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+/* Estilos para la ventana emergente de pago */
+.ventana-emergente {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+.contenido-ventana {
+  text-align: center;
+}
+
+.cerrar-ventana {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+
+.cerrar-ventana:hover {
+  color: #000;
+}
+
+#confirmar-pago-btn {
+  border: 1px solid white;
+  padding: 9px;
+  color: white;
+  background-color: #45a049;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px 3px black;
+}
+
+#confirmar-pago-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #45a049;
+  border: 1px solid #343d5b;
+}

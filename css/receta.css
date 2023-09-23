@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #F1F1F1;
+  transition: 0.3s ease all;
+  
+}
+
+body.dark {
+  background: rgb(27, 27, 27);
+  color: white;
+}
+
+body.dark .pasos {
+  background-color: #333;
+  color: white;
+}
+
+.switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  margin-right: 30px;
+}
+
+.switch::after {
+  content: "";
+  display: flex;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: rgb(0, 0, 0);
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+:root {
+  --font-heading: crimson;
+  --para-font: #777777;
+  --black: #222222;
+  --bg: rgba(237, 28, 70);
+}
+
+.fa-cart-shopping {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.fa-cart-shopping:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.navar-container {
+  margin-bottom: 60px;
+  width: 100%;
+  background-color: #93d844;
+  box-shadow: 0px 4px 5px 0px rgba(219, 137, 59, 0.71);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  top: 0;
+  z-index: 1000;
+ 
+}
+
+.navar {
+ 
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.navar-container a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navar-container a:hover {
+  color: #fff;
+}
+
+.navar-container h1 {
+  color: #222222;
+  font-size: 24px;
+  margin: 0;
+}
+
+.navar-container img {
+  width: 80px;
+}
+
+
+
+.container-carousel {
+  /* align-items: center;
+  justify-content: center; */
+  margin: auto;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background-color: #e0e0e0;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+
+.carruseles {
+  width: 1000%;
+  height: 100%;
+  display: flex;
+
+}
+
+.slider-section {
+  width: calc(100% / 5);
+  height: 100%;
+}
+
+.slider-section img {
+  
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.pasos {
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(201, 198, 197, 0.568);
+  width: 600px;
+}
+
+.content {
+  margin-bottom: 10px;
+
+}
+
+
+
+#btn-left,
+#btn-right {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff81;
+  transform: translate(0,-50%);
+  transition: .5s ease;
+  user-select: none;
+}
+
+#btn-left:hover,
+#btn-right:hover {
+  background-color: #333333d4;
+  color: #fff;
+}
+
+#btn-left {
+  left: 10px;
+}
+
+#btn-right {
+  right: 10px;
+}
+
+
+
+
+
+@media screen and (max-width:645px) {
+  .menu nav{
+    top: 0;
+    right: -250px;
+    background: white;
+    width: 100px;
+    height: 100vh;
+    padding: 40px;
+    z-index: 1;
+    transition: all 300ms;
+    flex-direction: column;
+    justify-content:flex-start;
+    z-index: 3;
+}
+
+.navar {
+  flex-direction: column;
+}
+
+.navar a{
+  margin-bottom: 50px;
+}
+
+.menu .navar a:first-child {
+  margin-top: 30px; 
+}
+
+#selected{
+    background: none;
+    padding: 0px;
+    border-radius: none;
+    color: #F6615D;
+}
+
+.menu nav img{
+    display: block;
+    width: 60px;
+}
+
+#back_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.menu #btn_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.menu #btn_menu:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+}
+
+@media screen and (min-width: 646px) {
+
+  .navar-container{
+    right: 0;
+    left: 0;
+  }
+  .menu nav {
+    right: -250px; 
+  }
+
+  #btn_menu {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 645px) {
+  .menu nav {
+    right: 0; 
+  }
+
+  #btn_menu {
+    display: flex; 
+  }
+}
+
